@@ -1,0 +1,554 @@
+/* Main Styles for Njumbi High School Past Papers Repository */
+
+:root {
+    --primary-color: #1a237e; /* Deep blue */
+    --secondary-color: #4caf50; /* Green */
+    --accent-color: #ff9800; /* Orange */
+    --light-color: #f5f5f5;
+    --dark-color: #333;
+    --gray-color: #757575;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+    --gradient-primary: linear-gradient(135deg, #1a237e 0%, #303f9f 100%);
+    --gradient-secondary: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    line-height: 1.6;
+    background-image: linear-gradient(to bottom, rgba(245, 245, 245, 0.8) 0%, rgba(245, 245, 245, 0.9) 100%);
+    background-attachment: fixed;
+}
+
+/* Header Styles */
+.navbar {
+    background: var(--gradient-primary);
+    box-shadow: var(--box-shadow);
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: white;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 1s ease-in-out;
+    border-top: 4px solid var(--primary-color);
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInTop {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 1 !important;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s ease-out forwards;
+    opacity: 1 !important;
+}
+
+.slide-in-top {
+    animation: slideInTop 0.5s ease-out forwards;
+    opacity: 1 !important;
+}
+
+/* Legal Doc Styles */
+.legal-card{background-color:#fff;border-top:4px solid var(--primary-color);} 
+.legal-card .card-body{line-height:1.8;font-size:0.95rem;padding:2rem;} 
+.legal-card h1{font-weight:700;color:var(--primary-color);} 
+.legal-card h2{font-size:1.15rem;margin-top:1.5rem;border-bottom:1px solid #dee2e6;padding-bottom:.4rem;color:var(--primary-color);} 
+.legal-card ul{list-style:disc;margin-left:1.25rem;margin-bottom:1rem;}
+.legal-card h1{font-weight:700;}
+.legal-card h2{font-size:1.15rem;margin-top:1.5rem;border-bottom:1px solid #dee2e6;padding-bottom:.4rem;color:var(--primary-color);} 
+/* Card Styles */
+.card {
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    border-radius: var(--border-radius);
+    border: none;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(var(--primary-rgb), 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover .icon-circle {
+    transform: scale(1.1);
+    background-color: rgba(var(--primary-rgb), 0.2);
+}
+
+.card-header {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Department Cards */
+.department-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    height: 100%;
+    transition: all var(--transition-speed) ease;
+    border: none;
+}
+
+.department-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.department-card .card-header {
+    background: var(--gradient-primary);
+    color: white;
+    font-weight: 600;
+    padding: 1.2rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.department-card .card-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: skewX(-30deg) translateX(90px);
+    transition: transform 0.5s ease;
+}
+
+.department-card:hover .card-header::after {
+    transform: skewX(-30deg) translateX(-50px);
+}
+
+.department-card .list-group-item {
+    border-left: none;
+    border-right: none;
+    transition: background-color 0.3s ease;
+}
+
+.department-card .list-group-item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Login Form */
+.login-form {
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.login-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-primary);
+    z-index: 2;
+}
+
+.login-form .form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.login-form .input-group-text {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(26, 35, 126, 0.25);
+}
+
+/* File Upload Area */
+.upload-area {
+    border: 2px dashed var(--gray-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.02);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(26, 35, 126, 0.05);
+}
+
+/* File Cards */
+.file-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 3px solid var(--secondary-color);
+}
+
+.file-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.file-card .file-icon {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.file-card:hover .file-icon {
+    transform: scale(1.1);
+}
+
+.file-card .file-info {
+    padding: 1.25rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+.file-card .file-actions {
+    padding: 1.25rem;
+    background-color: rgba(249, 249, 249, 0.5);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 3rem 0 2rem;
+    position: relative;
+    margin-top: 4rem;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-image: linear-gradient(45deg, transparent 33.333%, white 33.333%, white 66.667%, transparent 66.667%), linear-gradient(-45deg, transparent 33.333%, white 33.333%, white 66.667%, transparent 66.667%);
+    background-size: 20px 40px;
+    background-position: 0 0;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all var(--transition-speed) ease;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.hover-effect {
+    transition: all var(--transition-speed) ease;
+}
+
+.hover-effect:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-speed) ease;
+}
+
+.social-icon:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+    box-shadow: 0 4px 15px rgba(26, 35, 126, 0.3);
+    padding: 0.6rem 1.5rem;
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform var(--transition-speed) ease;
+}
+
+.btn-primary:hover::after,
+.btn-primary:focus::after {
+    transform: scaleY(1);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(26, 35, 126, 0.4);
+}
+
+.btn-success {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-success:hover,
+.btn-success:focus {
+    background-color: #3d8b40;
+    border-color: #3d8b40;
+}
+
+/* Contact Page Styles */
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: transform var(--transition-speed) ease;
+}
+
+.hover-effect:hover .contact-icon {
+    transform: scale(1.2);
+}
+
+.contact-form-container {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-primary);
+    z-index: 2;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+    opacity: 0;
+}
+
+/* Accordion Styles */
+.accordion-item {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+    border-radius: var(--border-radius) !important;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background-color: white;
+    color: var(--dark-color);
+    font-weight: 500;
+    padding: 1rem 1.25rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(26, 35, 126, 0.05);
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(26, 35, 126, 0.1);
+}
+
+.accordion-button::after {
+    background-size: 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.accordion-body {
+    padding: 1.25rem;
+    background-color: rgba(249, 249, 249, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+    
+    .navbar-brand img {
+        max-width: 120px;
+    }
+    
+    .navbar-brand span {
+        font-size: 0.9rem;
+    }
+    
+    .login-form {
+        padding: 1.5rem;
+    }
+    
+    .department-card .card-header {
+        padding: 1rem;
+    }
+    
+    footer {
+        text-align: center;
+    }
+    
+    footer .col-md-4:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-in-top {
+    animation: slideInTop 0.8s ease-in-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-in-out;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s ease-in-out;
+}
+
+.slide-in-top {
+    animation: slideInTop 0.7s ease-out;
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInTop {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-section h2 {
+        font-size: 1.2rem;
+    }
+}

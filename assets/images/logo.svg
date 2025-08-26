@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Background Shield -->
+  <path d="M100 10 L180 40 L180 120 C180 160 140 180 100 190 C60 180 20 160 20 120 L20 40 Z" fill="#1a237e" />
+  
+  <!-- Inner Shield -->
+  <path d="M100 20 L170 45 L170 115 C170 150 135 170 100 180 C65 170 30 150 30 115 L30 45 Z" fill="#ffffff" />
+  
+  <!-- Book -->
+  <rect x="60" y="70" width="80" height="60" rx="5" fill="#4caf50" />
+  <rect x="60" y="70" width="40" height="60" rx="5" fill="#3d8b40" />
+  <path d="M100 70 L100 130" stroke="#333" stroke-width="2" />
+  
+  <!-- Text -->
+  <text x="100" y="55" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a237e">NJUMBI HIGH SCHOOL</text>
+  
+  <!-- Motto -->
+  <text x="100" y="150" font-family="Arial" font-size="10" font-style="italic" text-anchor="middle" fill="#1a237e">KNOWLEDGE IS POWER</text>
+  
+  <!-- Torch -->
+  <path d="M100 90 L100 110 M90 100 L110 100" stroke="#ff9800" stroke-width="8" stroke-linecap="round" />
+  <circle cx="100" cy="100" r="5" fill="#ff9800" />
+  
+  <!-- Year -->
+  <text x="100" y="165" font-family="Arial" font-size="8" text-anchor="middle" fill="#1a237e">EST. 1985</text>
+</svg>
